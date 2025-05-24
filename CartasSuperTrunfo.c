@@ -30,11 +30,12 @@ int main()
 
     printf("Digite o código da Carta 1 (A letra do estado seguida de um número de 01 a 04): ");
     scanf("%s", codigo_carta1);
-    getchar(); // Limpa o último \n e evita o erro com o fgets
+    getchar(); // remove o último caractere lido (\n) do buffer e evita o erro com o fgets
 
     printf("Digite a cidade da Carta 1: ");
-    fgets(cidade_carta1, 50, stdin); // A função fgets é usada para Ler Strings com Espaços
-    cidade_carta1[strcspn(cidade_carta1, "\n")] = 0; 
+    fgets(cidade_carta1, 50, stdin); // A função fgets é usada para ler strings com espaços
+    cidade_carta1[strcspn(cidade_carta1, "\n")] = 0; /* remove o caractere de nova linha (\n) que fgets pode incluir na variavel de tipo string 
+    evitando erro de impressão de nova linha */
 
     printf("Digite o numero da populacão da Carta 1: ");
     scanf("%d", &populacao_carta1);
@@ -47,17 +48,18 @@ int main()
 
     printf("Digite o número de pontos turísticos da Carta 1: ");
     scanf("%d", &pontos_turisticos_carta1);
+    getchar(); // remove o último caractere lido (\n)
 
     // leitura de dados da Carta 2
     printf("\nDigite o estado da Carta 2 (escolha uma letra de 'A' a 'H' para representa-lo): ");
-    scanf(" %c", &estado_carta2);
+    scanf("%c", &estado_carta2);
 
     printf("Digite o código da Carta 2 (A letra do estado seguida de um número de 01 a 04): ");
     scanf("%s", codigo_carta2);
-    getchar(); // Limpa o último \n e evita o erro com o fgets
+    getchar(); // remove o último caractere lido (\n) e evita o erro com o fgets
 
     printf("Digite o nome da cidade da Carta 2: ");
-    fgets(cidade_carta2, 50, stdin); // A função fgets é usada para Ler Strings com Espaços
+    fgets(cidade_carta2, 50, stdin); // A função fgets é usada para ler strings com espaços
     cidade_carta2[strcspn(cidade_carta2, "\n")] = 0;
     
     printf("Digite o numero da populacão da Carta 2: ");
