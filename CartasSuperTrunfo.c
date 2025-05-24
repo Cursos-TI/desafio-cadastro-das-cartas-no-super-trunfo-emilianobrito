@@ -1,22 +1,96 @@
+// Super Trunfo em C - Países
+// Tema 1 - Cadastro das Cartas
+// Desafio: nível novato
+
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+int main()
+{
+    // Declaração das variáveis da carta 1
+    char estado_carta1; 
+    char codigo_carta1[4];
+    char cidade_carta1[50];
+    int populacao_carta1;
+    float area_carta1;
+    float pib_carta1;
+    int pontos_turisticos_carta1;
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    // Declaração das variáveis da carta 2
+    char estado_carta2;
+    char codigo_carta2[4];
+    char cidade_carta2[50];
+    int populacao_carta2;
+    float area_carta2;
+    float pib_carta2;
+    int pontos_turisticos_carta2;
+
+    // leitura de dados da Carta 1
+    printf("Digite o estado da Carta 1 (escolha uma letra de 'A' a 'H' para representa-lo): ");
+    scanf("%c", &estado_carta1);
+
+    printf("Digite o código da Carta 1 (A letra do estado seguida de um número de 01 a 04): ");
+    scanf("%s", codigo_carta1);
+    getchar(); // Limpa o último \n e evita o erro com o fgets
+
+    printf("Digite a cidade da Carta 1: ");
+    fgets(cidade_carta1, 50, stdin); // A função fgets é usada para Ler Strings com Espaços
+    cidade_carta1[strcspn(cidade_carta1, "\n")] = 0; 
+
+    printf("Digite o numero da populacão da Carta 1: ");
+    scanf("%d", &populacao_carta1);
+
+    printf("Digite a área em Km² da Carta 1: ");
+    scanf("%f", &area_carta1);
+
+    printf("Digite o PIB da Carta 1: ");
+    scanf("%f", &pib_carta1);
+
+    printf("Digite o número de pontos turísticos da Carta 1: ");
+    scanf("%d", &pontos_turisticos_carta1);
+
+    // leitura de dados da Carta 2
+    printf("\nDigite o estado da Carta 2 (escolha uma letra de 'A' a 'H' para representa-lo): ");
+    scanf(" %c", &estado_carta2);
+
+    printf("Digite o código da Carta 2 (A letra do estado seguida de um número de 01 a 04): ");
+    scanf("%s", codigo_carta2);
+    getchar(); // Limpa o último \n e evita o erro com o fgets
+
+    printf("Digite o nome da cidade da Carta 2: ");
+    fgets(cidade_carta2, 50, stdin); // A função fgets é usada para Ler Strings com Espaços
+    cidade_carta2[strcspn(cidade_carta2, "\n")] = 0;
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("Digite o numero da populacão da Carta 2: ");
+    scanf("%d", &populacao_carta2);
+
+    printf("Digite a área em Km² da Carta 2: ");
+    scanf("%f", &area_carta2);
+
+    printf("Digite o PIB da Carta 2: ");
+    scanf("%f", &pib_carta2);
+
+    printf("Digite o número de pontos turísticos da Carta 2: ");
+    scanf("%d", &pontos_turisticos_carta2);
+
+    // Impressão da Carta 1
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado_carta1);
+    printf("Código: %s\n", codigo_carta1);
+    printf("Nome da cidade: %s\n", cidade_carta1);
+    printf("População: %d\n", populacao_carta1);
+    printf("Área: %.2f Km²\n", area_carta1);
+    printf("PIB: %.2f bilhões de reais\n", pib_carta1);
+    printf("Número de pontos turísticos: %d\n", pontos_turisticos_carta1);
+
+    // Impressão da Carta 2
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", estado_carta2);
+    printf("Código: %s\n", codigo_carta2);
+    printf("Nome da cidade: %s\n", cidade_carta2);
+    printf("População: %d\n", populacao_carta2);
+    printf("Área: %.2f Km²\n", area_carta2);
+    printf("PIB: %.2f bilhões de reais\n", pib_carta2);
+    printf("Número de pontos turísticos: %d\n", pontos_turisticos_carta2);
 
     return 0;
 }
