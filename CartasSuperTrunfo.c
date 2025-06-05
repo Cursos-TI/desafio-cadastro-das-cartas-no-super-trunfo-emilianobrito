@@ -53,7 +53,7 @@ int main()
     evitando erro de impressão de nova linha */
 
     printf("Digite o numero da populacão da Carta 1: ");
-    scanf("%d", &populacao_carta1);
+    scanf("%lu", &populacao_carta1); //O especificador de formato %lu é usado para exibir valores unsigned long int
 
     printf("Digite a área em Km² da Carta 1: ");
     scanf("%f", &area_carta1);
@@ -78,7 +78,7 @@ int main()
     cidade_carta2[strcspn(cidade_carta2, "\n")] = 0;
     
     printf("Digite o numero da populacão da Carta 2: ");
-    scanf("%d", &populacao_carta2);
+    scanf("%lu", &populacao_carta2); //O especificador de formato %lu é usado para exibir valores unsigned long int
 
     printf("Digite a área em Km² da Carta 2: ");
     scanf("%f", &area_carta2);
